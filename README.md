@@ -10,7 +10,7 @@ Deep Seek
 
 # Explanation: 
 Prompt:
-"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over time."
+"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over ti
 Procedure:
 1. Define the core requirements of a personal productivity assistant.
 2. Identify and construct appropriate prompts for each task using an LLM (e.g., ChatGPT).
