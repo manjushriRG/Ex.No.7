@@ -6,176 +6,104 @@
 To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
 
 # AI Tools Required: 
-Deep Seek
+Lovable ai
 
 # Explanation: 
 Prompt:
-"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over ti
-Procedure:
-1. Define the core requirements of a personal productivity assistant.
-2. Identify and construct appropriate prompts for each task using an LLM (e.g., ChatGPT).
-3. Simulate natural user interaction through a simple interface or command-line system.
-4. Collect feedback or inputs from users and adapt responses accordingly.
-5. (Optional) Integrate basic memory to simulate preference adaptation.
-EXPECTED OUTPUT: - (attached the drive link)
-Output (Example Response by LLM):
-Personal Productivity Assistant Features:
-1. Daily Task Manager:
-o Accept tasks via natural language (e.g., "Remind me to call mom at 6 PM").
-o Organize tasks by priority and deadline.
-o Provide daily summaries and pending items.
-2. Smart Scheduler:
-o Schedule events and set reminders using contextual understanding.
-o Notify user of overlapping appointments or free time slots.
-3. Wellness Tips Generator:
-o Suggest daily wellness advice (hydration, exercise, screen-time breaks).
-o Adapt suggestions based on past user preferences and responses.
-# 1. Core Requirements & Simple Prompts
-Features: Basic task management, scheduling, wellness tips, and queries.
-Interaction: Command-line style with natural language inputs.
+Design and generate a Travel Itinerary Planner Website with a modern, responsive layout and an intuitive user experience. The website should guide users through the entire trip planning process — from trip idea to booking and itinerary visualization.
 
-## a. Daily Task Manager
-Prompt Example:
-"Extract task, time, and priority from: '[User Input]'. Respond in JSON with keys: task, time, priority (high/medium/low)."
+The design should include all major tasks and sections from top to bottom, such as:
 
-User Input: "Remind me to call Mom at 6 PM."
+🔝 1. Header & Navigation
 
-Output:
-``````````````````````````````````````````````````````````````````````````````
-json
-{ "task": "Call Mom", "time": "18:00", "priority": "medium" }
-`````````````````````````````````````````````````````````````````````````````````
-## b. Smart Scheduler
-Prompt Example:
-"Check if '[new event time]' conflicts with existing events: [existing events]. Respond with 'Conflict: Yes/No' and a summary."
+Logo and site name (e.g., “TripMate” or “Wanderly”)
 
-User Input: "Schedule a meeting at 3 PM tomorrow."
+Navigation links: Home, Plan Trip, Explore Destinations, Saved Trips, About, Contact
 
-Output:
-`````````````````````````````````````````````````````````````````
-"No conflict. Added 'Meeting' at 15:00 tomorrow."
-``````````````````````````````````````````````````````````````````
-## c. Wellness Tips Generator
-Prompt Example:
-"Suggest a wellness tip from: hydration, stretching, screen breaks. Avoid: [user disliked tips]."
+Login / Sign Up buttons
 
-Output:
-````````````````````````````````````````````````````````````````````````````````````
-*"Tip: Take a 5-minute screen break every hour to reduce eye strain!"*
-````````````````````````````````````````````````````````````````````````````````````
+🏖️ 2. Hero Section
 
-# 2. Intermediate: Contextual Understanding
-Enhancements: Conflict detection, priority sorting, basic user preferences.
+Large background image or video of travel destinations
 
-## a. Conflict Detection
-Prompt Example:
-"User input: '[event request]'. Existing events: [list]. Identify overlaps and respond with a warning if conflicts exist."
+Headline: “Plan Your Perfect Trip — From Dream to Departure”
 
-User Input: "Add yoga class at 5 PM today."
+Search bar: “Where do you want to go?” + date pickers + traveler count
 
-Output:
-````````````````````````````````````````````````````````````````````````````````
-"Warning: Conflicts with 'Team Meeting' (17:00–18:00). Reschedule?"
-````````````````````````````````````````````````````````````````````````````````
-## b. Priority-Based Task Sorting
-Prompt Example:
-"Sort tasks by priority (high > medium > low): [task list]. Format as a numbered list."
+Call-to-action button: “Start Planning”
 
-Output:
-````````````````````````````````````````````````````````````````````````````````````````````````
-markdown
-1. [High] Submit report by 17:00  
-2. [Medium] Call Mom at 18:00  
-3. [Low] Buy groceries
-3. Advanced: Adaptive Memory & Natural Interaction
+📅 3. Trip Planning Workflow (Main Feature)
 
-````````````````````````````````````````````````````````````````````````````````````````````````````````
-# 3. Advanced: Adaptive Memory & Natural Interaction
+Step 1: Choose Destination (search by city/country or discover via recommendations)
 
-## Enhancements:
+Step 2: Set Travel Dates and Duration
 
-Simulated memory for preferences, personalized responses
+Step 3: Add Accommodation (Hotels, Airbnbs, etc.)
 
-## a. Wellness Tips with Memory
-Prompt Example:
-"User previously disliked 'hydration' tips. Suggest a new tip. Options: meditation, walking, ergonomics."
+Step 4: Add Transportation (Flights, Car Rentals, Trains)
 
-Output:
-``````````````````````````````````````````````````````````````````````````````````````````````````````````````
-*"How about a 10-minute walk? It boosts energy and focus!"*
-``````````````````````````````````````````````````````````````````````````````````````````````````````````````
-## b. User Preference Adaptation
-Simulated Memory (JSON):
-`````````````````````````````````````````````````````````````````````````
-json
-{ "disliked_tips": ["hydration"], "preferred_time": "morning" }
-`````````````````````````````````````````````````````````````````````````````
-Prompt Example:
-"Generate a morning wellness tip based on user preferences: [memory]."
+Step 5: Add Activities & Attractions (browse local tours, experiences, restaurants)
 
-Output:
-`````````````````````````````````````````````````````````````
-"Start your day with 5 minutes of meditation!"
-`````````````````````````````````````````````````````````````
-## c. Natural Language Interaction
-Prompt Example:
-"Respond conversationally to the user's task list request: [tasks]."
+Step 6: Budget Estimator (auto-calculates estimated total cost)
 
-User Input: "What’s on my schedule today?"
+Step 7: Review & Save Itinerary (with export to PDF or shareable link)
 
-Output:
-````````````````````````````````````````````````````````````````````````````
-*"Here’s your day:
+🗺️ 4. Interactive Itinerary Map
 
-10:00 AM: Project meeting (high priority)
+Integrate a map showing daily routes, destinations, and major stops
 
-3:00 PM: Email clients (medium)
+Option to rearrange days via drag-and-drop
 
-7:00 PM: Gym (low)
-Need adjustments?"*
-``````````````````````````````````````````````````````````````````````````````
-# 4. Optional: Feedback Loop & Interface Simulation
-Feedback Collection:
-After each action, ask: "Was this helpful? (Yes/No)"
+💡 5. Suggested Destinations Section
 
-If "No": "Noted! I’ll adjust future suggestions."
+Cards with trending destinations, top-rated spots, and travel tips
 
-Command-Line Simulation (Python Pseudocode):
+Filter by season, budget, or interest (beach, adventure, culture, etc.)
 
-## python
-``````````````````````````````````````````````````````````````````````````````````````````````````
-while True:
-    user_input = input("You: ")
-    if "add task" in user_input:
-        # Trigger task manager prompt
-    elif "wellness tip" in user_input:
-        # Fetch tip from memory-adapted prompt
-    # ... other actions
-````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
-## Expected Output Example
-User: "Plan a blog draft and a dentist appointment at 2 PM tomorrow."
-## Assistant:
-`````````````````````````````````````````````````````````````````````````````````````````````````````````````
-json
-{
-  "tasks": [
-    { "task": "Write blog draft", "time": "Flexible", "priority": "high" },
-    { "task": "Dentist appointment", "time": "14:00", "priority": "medium" }
-  ],
-  "summary": "Added 2 tasks. No schedule conflicts detected!"
-}
-``````````````````````````````````````````````````````````````````````````````````````````````````````````````````
-User: "What wellness tip do you recommend?"
-## Assistant (Adaptive):
-"Since you enjoy fresh air: Take a walk outside for 10 minutes!"
+💬 6. User Reviews & Community
 
-Progression Summary:
+Section showing traveler stories or sample itineraries
 
-Simple: Structured prompts for task extraction.
+Rating and comment system
 
-Intermediate: Context-aware scheduling and sorting.
+👤 7. User Dashboard
 
-Advanced: Memory-driven personalization and natural dialogue.
+Saved trips overview
+
+Download, edit, or duplicate itineraries
+
+Profile management and travel preferences
+
+📩 8. Newsletter Signup
+
+Simple form with incentives like “Get weekly travel inspiration”
+
+🦶 9. Footer
+
+Quick links (FAQs, Support, Privacy Policy, Terms)
+
+Social media icons
+
+Contact info
+
+🎨 Design & Technical Guidelines
+
+Responsive layout (desktop, tablet, mobile)
+
+Clean, modern UI (use colors inspired by travel — sky blue, sand, green)
+
+Use icons for each trip step
+
+Include subtle animations and hover effects
+
+Consider integration with APIs (Google Maps, Skyscanner, Booking.com)
+
+# Output:
+<img width="1457" height="793" alt="Screenshot 2025-11-10 091022" src="https://github.com/user-attachments/assets/d49b4361-9bb5-45dd-a2f4-c358fc9cada4" />
+<img width="1435" height="711" alt="Screenshot 2025-11-10 091045" src="https://github.com/user-attachments/assets/40b53c1c-fafc-4eb0-b5e0-2920cdcca386" />
+<img width="1442" height="796" alt="Screenshot 2025-11-10 091104" src="https://github.com/user-attachments/assets/ff117438-809c-49f8-8126-2f39548c100f" />
+<img width="1451" height="715" alt="Screenshot 2025-11-10 091129" src="https://github.com/user-attachments/assets/ed3322e8-1ae0-408d-a4f3-44d0b8cce7c7" />
+<img width="1447" height="803" alt="Screenshot 2025-11-10 091149" src="https://github.com/user-attachments/assets/83883863-311f-4f3a-b75d-721fb4d8645d" />
 
 
 # Result: 
